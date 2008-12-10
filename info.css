@@ -1,0 +1,115 @@
+/*
+	eXchange World Map
+	URL: http://www.aiesec.spb.ru
+	Version: 0.1
+	Date: November, 2008
+	Author: Mijail Cisneros
+	e-mail: mijail.cisneros@aiesec.net
+	Browsers: Firefox, Opera, Safari, Seamonkey
+	License: GPL v3
+*/
+
+#estetic_window{
+	width:300px !important;
+	display: table;
+}
+
+#estetic_window_contents a{
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#estetic_window_contents{
+	/*background:#FFF url(images/ajax-loader.gif) 50% 50% no-repeat;*/
+	background:#FFF;
+	/*width:224px;*/
+}
+
+#estetic_window_contents #info{
+	background:#FFF url(images/ajax-loader.gif) 50% 50% no-repeat;
+	/*width:224px;*/
+	height:50px;
+}
+
+#estetic_window_beak{
+	width:33px;
+	height:34px;
+	background: url(images/window_beak.png) top left no-repeat transparent;
+	margin-left: -2px;
+}
+
+* html #estetic_window_beak{ 
+	background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#039;images/window_beak.png&#039;,sizingMethod=&#039;crop&#039;);
+}
+
+#estetic_window_tl,#estetic_window_tr,#estetic_window_bl,#estetic_window_br,#estetic_window_t,#estetic_window_l,#estetic_window_r,#estetic_window_b{ 
+	background-color:#F00;
+	height:2px;
+	width:2px;
+}
+
+#estetic_window_tl{
+	width:13px;
+	height:13px;
+	background: url(images/window_tl.png) top left no-repeat;
+	_background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#039;/files/images/gmaps_window/window_tl.png&#039;,sizingMethod=&#039;crop&#039;);
+}
+
+#estetic_window_t{
+	background: url(images/window_t.png) top left repeat-x;
+	_background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#039;images/window_t.png&#039;,sizingMethod=&#039;crop&#039;);
+}
+
+#estetic_window_tr{
+	background: url(images/window_tr.png) top right no-repeat;
+	_background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#039;images/window_tr.png&#039;,sizingMethod=&#039;crop&#039;);
+	width:13px;
+	height:13px;
+	}
+
+#estetic_window_bl{
+	width:13px;
+	height:13px;
+	background: url(images/window_bl.png) bottom left no-repeat;
+	_background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#039;images/window_bl.png&#039;,sizingMethod=&#039;crop&#039;);
+}
+
+#estetic_window_b{
+	background: url(images/window_b.png) bottom left repeat-x;
+	_background: none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#039;images/window_b.png&#039;,sizingMethod=&#039;crop&#039;);
+}
+#estetic_window_br{
+	background: url(images/window_br.png) bottom right no-repeat;
+	_background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#039;images/window_br.png&#039;,sizingMethod=&#039;crop&#039;);
+	width:13px;
+	height:13px;
+}
+
+#estetic_window_l{
+	background: url(images/window_l.png) top left repeat-y;
+	_background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#039;images/window_l.png&#039;,sizingMethod=&#039;crop&#039;);
+	width:13px;
+}
+
+#estetic_window_r{
+	background: url(images/window_r.png) top right repeat-y;
+	_background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#039;images/window_r.png&#039;,sizingMethod=&#039;crop&#039;);
+	width:13px;
+}
+
+#estetic_window_close{
+	background: url(images/window_close.png) bottom left no-repeat;
+	_background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#039;images/window_close.png&#039;,sizingMethod=&#039;crop&#039;);
+	width:20px;
+	height:20px;
+	cursor: pointer;
+}
