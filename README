@@ -2,7 +2,7 @@
 	eXchange World Map
 =====================================================
 	URL: http://www.aiesec.spb.ru
-	Version: 0.1
+	Version: 0.2
 	Date: November, 2008
 	Author: Mijail Cisneros
 	e-mail: mijail.cisneros@aiesec.net
@@ -43,4 +43,3 @@ image.php
 form.html
 form.php
 	- The form and the PHP script for processing the form
-	
