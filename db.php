@@ -23,5 +23,4 @@ if (!$db_selected)
 
 // Convert the connection collation to UTF-8
 mysql_query("SET NAMES utf8");
-
 ?>
