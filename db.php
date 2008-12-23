@@ -8,7 +8,8 @@
 	License: GPL v3
 */
 
-include "config.php"; // Get setting for connecting to DB
+// Get setting for connecting to DB
+include "config.php";
 
 // Opens a connection to a MySQL server
 $connection = mysql_connect ($host, $username, $password);

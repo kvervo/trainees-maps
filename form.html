@@ -5,15 +5,88 @@
 	</head>
 	<body>
 		<form action="form.php" method="post" enctype="multipart/form-data">
-			Name:<input name="name" type="text" /><br/>
+		<table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
+		<tr> 
+			<td>
+			Photo:	
+			</td>
+			<td width="246">
+			<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+			<input name="photo" type="file" id="photo"> 
+			</td>
+			
+		</tr>
+		<tr>	
+			<td>
+			Name:	
+			</td>
+			<td>
+			<input type="text" name="name" />
+			</td>
+		</tr>
+
+		<tr>	
+			<td>
+			Surname:
+			</td>
+			<td>
+			<input type="text" name="surname" />
+			</td>
+		</tr>
+
+
+		<tr>	
+			<td>
+			Address:
+			</td>
+			<td>
+			<input type="text" name="address" />
+			</td>
+		</tr>
+
+		<tr>	
+			<td>
 			Type:
-			<input name="type" type="radio" value="out"/>out
-			<input name="type" type="radio" value="in"/>in<br/>
-			Address:<input name="address" type="text" /><br/>
-			Text:<input name="info" type="text" /><br/>
-			Period:<input name="period" type="text" /><br/>
-			Photo: <input name="photo" type="file" /><br/>
-			<input name="submit" type="Submit" value="Done">
+			</td>	
+			<td>
+			<input type="radio" name="type" value="in" />IN
+			<input type="radio" name="type" value="out" />OUT
+			</td>
+		</tr>
+
+		<tr>	
+			<td>
+			Period:
+			</td>	
+			<td>
+			<input type="text" name="period" />
+			</td>
+		</tr>
+
+		<tr>	
+			<td>
+			Company:
+			</td>	
+			<td>
+			<input type="text" name="company" />
+			</td>
+		</tr>
+
+		<tr>	
+			<td>
+			Info:
+			</td>	
+			<td>
+			<textarea name="info"></textarea>
+			</td>
+		</tr>
+
+		<tr>
+			<td width="80">
+			<input name="submit" type="submit" class="box" id="upload" value=" Save ">
+			</td>
+		</tr>
+		</table>
 		</form>
 	
 	</body>

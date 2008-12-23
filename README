@@ -1,5 +1,6 @@
+=====================================================
 	eXchange World Map
-
+=====================================================
 	URL: http://www.aiesec.spb.ru
 	Version: 0.1
 	Date: November, 2008
@@ -8,7 +9,38 @@
 	Browsers: Firefox, Opera, Safari, Seamonkey
 	License: GPL v3
 	
-	-------------------------------------------------
+=====================================================
 	ABOUT
-	-------------------------------------------------
+=====================================================
 	This a project for AIESEC SPUEF.
+	
+	
+=====================================================
+	Files
+=====================================================
+
+maps.js
+	- The JS code for Google Maps. Creation and control
+	of markers.
+	
+map.php
+	- The PHP code for retrieving the data from the DB
+	- Creation of the XML files
+
+db.php
+	- Connector to DB
+
+config.php
+	- Settings for DB connection
+	
+index.php
+	- Home page of the application
+	
+image.php
+	- The PHP code for retrieving the image from the DB
+	
+	
+form.html
+form.php
+	- The form and the PHP script for processing the form
+	
