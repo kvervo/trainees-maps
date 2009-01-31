@@ -17,13 +17,21 @@
 	</style>
   </head>
   <body onload="load()" onunload="GUnload()">
-    <div id="map" style="width: 100%; height: 400px"></div>
+    
+	<div id="header">
+		<h1>
+		Международная программа стажировок
+		</h1>
+	</div>
+
+	<div id="content_map">
+		<div id="map"></div>
+	</div>
 	
-	<div id="trainees" style="width: 100%; margin: 20px 0">
-		
-		<table style="width:100%; margin: 0; padding: 0; border-collapse: collapse; border: 1px solid #444">
-		<tr>
-				<td></td>
+	<div id="content_trainees">
+		<table>
+			<tr>
+				<th>Type</th>
 				<th>Name</th>
 				<th>Country of origin</th>
 				<th>Period of Time</th>
@@ -52,9 +60,5 @@ mysql_close($connection);
 	
 		</table>
 	</div>	
-
   </body>
 </html>
-
-
-
