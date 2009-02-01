@@ -42,11 +42,11 @@
 	<div id="content_trainees">
 		<table>
 			<tr>
-				<th>Type</th>
-				<th>Name</th>
-				<th>Country of origin</th>
-				<th>Period of Time</th>
-				<th>Company</th>
+				<th></th>
+				<th>Имя</th>
+				<th>Страна</th>
+				<th>Продолжительность</th>
+				<th>Компания</th>
 			</tr>
 <?
 $query  = "SELECT * FROM aiesec_trainees";
@@ -57,19 +57,19 @@ while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 	if($count%2!=0){
 	echo "<tr class=\"color\">
 			<td>{$row['type']}</td>
-			<td>{$row['name']} </td>" .
+			<td><a href=\"\">{$row['name']}</a></td>" .
 	        "<td>{$row['address']} </td>" . 
-    	    "<td></td>".
-			"<td></td>".
+    	    "<td>{$row['period']}</td>".
+			"<td>{$row['company']}</td>".
 		 "</tr>";
 	}
 	else{
 	echo "<tr>
 			<td>{$row['type']}</td>
-			<td>{$row['name']} </td>" .
+			<td><a href=\"\">{$row['name']}</a></td>" .
          "<td>{$row['address']} </td>" . 
-         "<td></td>".
-		 "<td></td>".
+         "<td>{$row['period']}</td>".
+		 "<td>{$row['company']}</td>".
 		 "</tr>";
 	}
 	if($count == 5) break;
