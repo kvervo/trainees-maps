@@ -22,7 +22,7 @@ if(isset($_GET['q'])&&$_GET['q']=='markers')
 {	
 	XML(); // Retrieve and create an XML data, used for creating the markers on the map
 }
-elseif(isset($_GET['q']))
+elseif(isset($_GET['q'])&&$_GET['q']!='geo')
 {
 	info($_GET['q']);
 }
@@ -88,7 +88,7 @@ function info($id){
 	$row = @mysql_fetch_assoc($result);
 	echo '<div class="estetic_window_info">'.
 		'<a href="http://www.aiesec.spb.ru/students/trainees/tr1" title="'.$row[name].'">'.$row['name'].'</a><br/>'.
-		'<img src="image.php?id='.$id.'" style="float:right; margin: 2px 3px 5px 3px; border: 1px solid #d6d6d6; padding: 2px;" width="100px" height="133px" />'.
+		'<img src="http://www.aiesec.spb.ru/assets/images/trainees/'.$row['id_photo'].'" style="float:right; margin: 2px 3px 5px 3px; border: 1px solid #d6d6d6; padding: 2px;" width="100px" height="133px" />'.
 		'<span style="font-size: 1.1em"><strong>'.$row[address].'</strong><br/>'.
 		$row[period].'<br/>'.
 		$row[company].'</span>'.

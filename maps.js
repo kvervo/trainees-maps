@@ -85,7 +85,7 @@ function createMarker(point, name, address, type, id) {
     else
     markerOptions = { icon:inIcon };
 	var marker = new GMarker(point, markerOptions);
-    var html = "<b>" + name + "</b> <br/>" + address;
+    var html = '<b>' + name + '</b><br />' + address;
     GEvent.addListener(marker, 'click', function() {
 		marker.openExtInfoWindow(
 		   map,

@@ -32,9 +32,10 @@
 		</div>-->
 		<div id="map"></div>
 		<div class="bottom">
-			<span class="results">Точки загружены. Всего в городе — 194.
-			</span>
-			<span class="map_info">Точки загружены.
+			<span class="results"></span>
+			<span class="map_info">
+			<img src="images/user_02.png" alt="Outgoing Traineerships" />Исходящие Стажировки
+			<img src="images/user_01.png" alt="Incoming Traineerships" />Входящие Стажировки
 			</span>
 		</div>
 	</div>
@@ -54,9 +55,10 @@ $result = mysql_query($query);
 $count = 0;
 while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 {
+	$type = $row['type']=='out' ? 'out' : 'in';
 	if($count%2!=0){
 	echo "<tr class=\"color\">
-			<td>{$row['type']}</td>
+			<td><img src=\"images/{$type}_white.png\" alt=\"{$type}\"></td>
 			<td><a href=\"\">{$row['name']}</a></td>" .
 	        "<td>{$row['address']} </td>" . 
     	    "<td>{$row['period']}</td>".
@@ -65,12 +67,12 @@ while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 	}
 	else{
 	echo "<tr>
-			<td>{$row['type']}</td>
+			<td><img src=\"images/{$type}.png\" alt=\"{$type}\"></td>
 			<td><a href=\"\">{$row['name']}</a></td>" .
-         "<td>{$row['address']} </td>" . 
-         "<td>{$row['period']}</td>".
-		 "<td>{$row['company']}</td>".
-		 "</tr>";
+			"<td>{$row['address']} </td>" . 
+			"<td>{$row['period']}</td>".
+			"<td>{$row['company']}</td>".
+		"</tr>";
 	}
 	if($count == 5) break;
 	$count++;

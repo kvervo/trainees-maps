@@ -31,9 +31,9 @@
 }
 
 #content_map .bottom{
-	font-size: 1.3em;
+	font-size: 1.1em;
 	padding: 0 10px;
-	height: 15px;
+	height: 2em;
 }
 
 #content_map .bottom .results{
@@ -44,6 +44,12 @@
 #content_map .bottom .map_info{
 	position: relative;
 	float: right;
+}
+
+#content_map .bottom .map_info img{
+	margin: 2px 5px 0 5px;
+	width: 10px;
+	height: 18px;
 }
 
 #map{
