@@ -11,15 +11,46 @@
 
 #content_map{
 	width: 100%;
-	background: #ddd;
+	background: #eee;
 	padding: 5px 0;
 	margin: 10px 0 20px 0;
+}
+
+#content_map .top{
+	height: 25px;
+	font-size: 1.4em;
+	padding: 0 10px;
+	margin: 5px 0 8px 0;
+}
+
+#content_map .top a{
+	width: 95px;
+	background-color: #ccc;
+	padding: 5px 10px;
+	
+}
+
+#content_map .bottom{
+	font-size: 1.3em;
+	padding: 0 10px;
+	height: 15px;
+}
+
+#content_map .bottom .results{
+	position: relative;
+	float: left;
+}
+
+#content_map .bottom .map_info{
+	position: relative;
+	float: right;
 }
 
 #map{
 	width: 98%;
 	height: 400px;
 	margin: 0 auto;
+	border: 1px solid #fff;
 }
 
 

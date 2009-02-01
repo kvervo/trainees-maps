@@ -19,16 +19,29 @@ var batch = [];
 //var gMarkers = []; 
 
 //
-// Creation of a base icon
+// Creation icon for the incoming traineership
 //
-var baseIcon = new GIcon(G_DEFAULT_ICON);
-baseIcon.image = "images/user_01.png";
-baseIcon.shadow = "";
-baseIcon.iconSize = new GSize(13, 23);
+var inIcon = new GIcon(G_DEFAULT_ICON);
+inIcon.image = "images/user_01.png";
+inIcon.shadow = "";
+inIcon.iconSize = new GSize(13, 23);
 //baseIcon.shadowSize = new GSize(37, 34);
-baseIcon.iconAnchor = new GPoint(7, 23);
-baseIcon.infoWindowAnchor = new GPoint(7, 12);
+inIcon.iconAnchor = new GPoint(7, 23);
+inIcon.infoWindowAnchor = new GPoint(7, 12);
 //var markerOptions = {draggable: true};
+
+//
+// Creation of icon for the outgoing traineership
+//
+var outIcon = new GIcon(G_DEFAULT_ICON);
+outIcon.image = "images/user_02.png";
+outIcon.shadow = "";
+outIcon.iconSize = new GSize(13, 23);
+//baseIcon.shadowSize = new GSize(37, 34);
+outIcon.iconAnchor = new GPoint(7, 23);
+outIcon.infoWindowAnchor = new GPoint(7, 12);
+//var markerOptions = {draggable: true};
+
 
 
 // Creates the map when the page finishes loading
@@ -67,7 +80,10 @@ function setupMarkers(){
 	
 // Creation of a single Marker on the map
 function createMarker(point, name, address, type, id) {
-    markerOptions = { icon:baseIcon };
+    if(type=='out')
+    markerOptions = { icon:outIcon };
+    else
+    markerOptions = { icon:inIcon };
 	var marker = new GMarker(point, markerOptions);
     var html = "<b>" + name + "</b> <br/>" + address;
     GEvent.addListener(marker, 'click', function() {

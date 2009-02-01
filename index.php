@@ -20,12 +20,23 @@
     
 	<div id="header">
 		<h1>
-		������������� ��������� ����������
+		Международная программа стажировок
 		</h1>
 	</div>
 
 	<div id="content_map">
+		<!--<div class="top">
+			<a href="">Outgoing</a>
+			<a href="">Incoming</a>
+			<a href="">All</a>
+		</div>-->
 		<div id="map"></div>
+		<div class="bottom">
+			<span class="results">Точки загружены. Всего в городе — 194.
+			</span>
+			<span class="map_info">Точки загружены.
+			</span>
+		</div>
 	</div>
 	
 	<div id="content_trainees">
@@ -43,6 +54,16 @@ $result = mysql_query($query);
 $count = 0;
 while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 {
+	if($count%2!=0){
+	echo "<tr class=\"color\">
+			<td>{$row['type']}</td>
+			<td>{$row['name']} </td>" .
+	        "<td>{$row['address']} </td>" . 
+    	    "<td></td>".
+			"<td></td>".
+		 "</tr>";
+	}
+	else{
 	echo "<tr>
 			<td>{$row['type']}</td>
 			<td>{$row['name']} </td>" .
@@ -50,6 +71,7 @@ while($row = mysql_fetch_array($result, MYSQL_ASSOC))
          "<td></td>".
 		 "<td></td>".
 		 "</tr>";
+	}
 	if($count == 5) break;
 	$count++;
 } 
